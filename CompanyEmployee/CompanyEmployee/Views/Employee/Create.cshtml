@@ -1,0 +1,28 @@
+﻿@model EmployeeDTO
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <h1>Add Employee</h1>
+    <form class="forms-sample" method="post" asp-action="Create">
+        <div class="form-group">
+            @* For Naming Label *@
+            <label asp-for="Name"></label>
+            <input class="form-control" asp-for="Name" maxlength="156" style="width:350px;">
+            <span class="text-danger" asp-validation-for="Name" type="text"></span>
+        </div>
+        <div class="form-group my-2">
+            <label asp-for="DepartmentId"></label>
+            <select asp-for="DepartmentId" asp-items="@ViewBag.DepartmentSelectList"></select>
+            <span class="text-danger" asp-validation-for="DepartmentId"></span>
+        </div>
+        <button type="submit" class="btn btn-primary me-2">Submit</button>
+        <a asp-action="Index" class="btn btn-light">Cancel</a>
+    </form>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+
