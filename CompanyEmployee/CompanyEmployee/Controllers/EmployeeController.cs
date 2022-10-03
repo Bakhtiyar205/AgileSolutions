@@ -74,6 +74,14 @@ namespace CompanyEmployee.Controllers
         }
         #endregion
 
+        #region Detail
+        public async Task<IActionResult> Detail(int id)
+        {
+            if(id<=0) NotFound();
+            return View(await _employeeService.FindDTOAsync(id));
+        }
+        #endregion
+
         #region DepartmentEmployees
         public async Task<IActionResult> DepartmentEmployees(int departmentId, int? take , int? page)
         {

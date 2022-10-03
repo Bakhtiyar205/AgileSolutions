@@ -2,9 +2,9 @@
 @{
     ViewData["Title"] = "Detail";
 }
-
-<h1>@Model.Name</h1>
-<h1>Employees(@Model.Employees.Where(m=>!m.IsDeleted).Count())
+<h1>Department Detail</h1>
+<h3>Department Name:@Model.Name</h3>
+<h3>Employees(@Model.Employees.Where(m=>!m.IsDeleted).Count())
     - 
-    <a asp-controller="employee" asp-action="departmentEmployees" asp-route-departmentId="@Model.Id">More Info</a></h1>
+    <a asp-controller="employee" asp-action="departmentEmployees" asp-route-departmentId="@Model.Id">More Info</a></h3>
 

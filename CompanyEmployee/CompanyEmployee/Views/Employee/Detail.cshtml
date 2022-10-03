@@ -1,0 +1,14 @@
+﻿@model EmployeeDTO
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h3>Name: @Model.Name</h3>
+<h3>Department Name: @Model.Department.Name</h3>
+<h3>Surname: @Model.Surname</h3>
+<h3>Date of Birth: @Model.BirthDate.ToString("dddd, dd MMMM yyyy")</h3>
+<h3>Serie: @Model.Serie</h3>
+<h3>Serial Number: @Model.SerialNumber</h3>
+<h3>Pin: @Model.Pin</h3>
+
+

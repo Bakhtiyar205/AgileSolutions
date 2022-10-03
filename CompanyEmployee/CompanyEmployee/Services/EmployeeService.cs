@@ -52,6 +52,11 @@ namespace CompanyEmployee.Services
                                        {
                                            Id = m.Id,
                                            Name = m.Name,
+                                           Surname = m.Surname,
+                                           BirthDate = m.BirthDate,
+                                           Serie= m.Serie,
+                                           SerialNumber = m.SerialNumber,
+                                           Pin = m.Pin,
                                            Department = m.Department,
                                            DepartmentId = m.DepartmentId,
                                            IsDeleted = m.IsDeleted,
@@ -97,6 +102,11 @@ namespace CompanyEmployee.Services
                                        {
                                            Id = m.Id,
                                            Name = m.Name,
+                                           Surname = m.Surname,
+                                           BirthDate = m.BirthDate,
+                                           Serie = m.Serie,
+                                           SerialNumber = m.SerialNumber,
+                                           Pin = m.Pin,
                                            Department = m.Department,
                                            DepartmentId = m.DepartmentId,
                                            IsDeleted = m.IsDeleted,
@@ -114,6 +124,11 @@ namespace CompanyEmployee.Services
             Employee employee = new()
             {
                 Name = employeeDTO.Name,
+                Surname = employeeDTO.Surname,
+                BirthDate = employeeDTO.BirthDate,
+                Serie = employeeDTO.Serie,
+                SerialNumber = employeeDTO.SerialNumber,
+                Pin = employeeDTO.Pin,
                 Department = employeeDTO.Department,
                 DepartmentId = employeeDTO.DepartmentId,
             };
@@ -128,6 +143,11 @@ namespace CompanyEmployee.Services
             Employee employee = await FindAsync(id);
             employee.Name = employeeDTO.Name;
             employee.DepartmentId = employeeDTO.DepartmentId;
+            employee.Pin = employeeDTO.Pin;
+            employee.SerialNumber = employeeDTO.SerialNumber;
+            employee.Serie = employeeDTO.Serie;
+            employee.Surname = employeeDTO.Surname;
+            employee.BirthDate = employeeDTO.BirthDate;
             await _context.SaveChangesAsync();
         }
         #endregion
@@ -149,7 +169,13 @@ namespace CompanyEmployee.Services
                          .Select(m => new EmployeeDTO
                          {
                              Name=m.Name,
+                             Surname=m.Surname,
+                             BirthDate=m.BirthDate,
+                             Serie=m.Serie,
+                             SerialNumber =m.SerialNumber,
+                             Pin=m.Pin,
                              DepartmentId=m.DepartmentId,
+                             Department = m.Department,
                              IsDeleted=m.IsDeleted,
                              Id = m.Id
                          })

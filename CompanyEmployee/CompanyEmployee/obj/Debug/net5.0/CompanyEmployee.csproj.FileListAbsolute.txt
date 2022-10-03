@@ -154,3 +154,4 @@ C:\Users\Baxtiyar\Documents\UpSystems\CompanyEmployee\CompanyEmployee\obj\Debug\
 C:\Users\Baxtiyar\Documents\UpSystems\CompanyEmployee\CompanyEmployee\obj\Debug\net5.0\Razor\Views\Employee\Update.cshtml.g.cs
 C:\Users\Baxtiyar\Documents\UpSystems\CompanyEmployee\CompanyEmployee\obj\Debug\net5.0\Razor\Views\Department\Detail.cshtml.g.cs
 C:\Users\Baxtiyar\Documents\UpSystems\CompanyEmployee\CompanyEmployee\obj\Debug\net5.0\Razor\Views\Employee\DepartmentEmployees.cshtml.g.cs
+C:\Users\Baxtiyar\Documents\UpSystems\CompanyEmployee\CompanyEmployee\obj\Debug\net5.0\Razor\Views\Employee\Detail.cshtml.g.cs
